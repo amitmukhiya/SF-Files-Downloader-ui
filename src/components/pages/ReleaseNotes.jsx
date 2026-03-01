@@ -5,7 +5,7 @@ import "./ReleaseNotes.css";
 const RELEASES = [
   {
     version: "v1.0.0",
-    date: "2025-06-01",
+    date: "2026-03-01",
     badge: "LATEST",
     label: "INITIAL RELEASE — Chrome Web Store",
     changes: [

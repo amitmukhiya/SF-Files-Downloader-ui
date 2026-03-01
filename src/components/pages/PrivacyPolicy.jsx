@@ -29,11 +29,11 @@ export default function PrivacyPolicy() {
         <div className="policy-meta reveal">
           <div className="meta-item">
             <label>Effective Date</label>
-            <span>June 1, 2025</span>
+            <span>March 1, 2026</span>
           </div>
           <div className="meta-item">
             <label>Last Updated</label>
-            <span>June 1, 2025</span>
+            <span>March 1, 2026</span>
           </div>
           <div className="meta-item">
             <label>Extension Version</label>
