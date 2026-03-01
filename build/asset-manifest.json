@@ -6,8 +6,5 @@
     "main.9fa05cb6.css.map": "/static/css/main.9fa05cb6.css.map",
     "main.7235c372.js.map": "/static/js/main.7235c372.js.map"
   },
-  "entrypoints": [
-    "static/css/main.9fa05cb6.css",
-    "static/js/main.7235c372.js"
-  ]
+  "entrypoints": ["static/css/main.9fa05cb6.css", "static/js/main.7235c372.js"]
 }
