@@ -1,0 +1,88 @@
+.policy-intro {
+  color: var(--ink2);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 680px;
+}
+
+.policy-meta {
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.meta-item label {
+  display: block;
+  font-family: "DM Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  margin-bottom: 0.25rem;
+}
+
+.meta-item span {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ── Policy sections ──────────────────── */
+.policy-section {
+  margin-bottom: 2.75rem;
+}
+
+.policy-section h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.sec-num {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  padding: 2px 7px;
+  font-family: "DM Mono", monospace;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.policy-section p {
+  font-size: 0.9rem;
+  color: var(--ink2);
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+}
+
+.policy-section ul {
+  padding-left: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.policy-section ul li {
+  font-size: 0.875rem;
+  color: var(--ink2);
+  line-height: 1.7;
+  margin-bottom: 0.3rem;
+}
+
+/* ── Responsive ───────────────────────── */
+@media (max-width: 600px) {
+  .policy-meta {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+  }
+}

@@ -1,0 +1,289 @@
+/* ── Reset & Base ────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f5f4f0;
+  --paper: #ffffff;
+  --ink: #141210;
+  --ink2: #3d3a35;
+  --ink3: #7a756c;
+  --rule: #e2dfd9;
+  --accent: #d4500a;
+  --accent2: #1a56db;
+  --accent3: #0e7a4e;
+  --tag-bg: #fdf1ec;
+  --shadow: 4px 4px 0 var(--ink);
+  --shadow-soft: 3px 3px 0 var(--rule);
+  --radius: 8px;
+  --radius-sm: 4px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent2);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* ── Utility Classes ─────────────────────────────────────────────── */
+.mono {
+  font-family: "DM Mono", monospace;
+}
+
+.page-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3rem 2rem 6rem;
+}
+
+.wide-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 3rem 2rem 6rem;
+}
+
+.sec-eyebrow {
+  font-family: "DM Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.sec-h {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.75rem;
+}
+
+.sec-lead {
+  color: var(--ink2);
+  line-height: 1.7;
+  max-width: 620px;
+  margin-bottom: 2.5rem;
+}
+
+hr.divider {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0;
+}
+
+/* ── Reveal animation ────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0.72rem 1.4rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all 0.15s;
+  border: 1.5px solid transparent;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+}
+
+.btn-solid {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+.btn-solid:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--paper);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.btn-outline:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.btn-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+/* ── Code blocks ─────────────────────────────────────────────────── */
+.code-wrap {
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: var(--shadow);
+}
+
+.code-head {
+  background: var(--ink);
+  color: rgba(255, 255, 255, 0.55);
+  padding: 0.6rem 1.1rem;
+  font-family: "DM Mono", monospace;
+  font-size: 0.72rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.code-head .fname {
+  color: #fff;
+  font-weight: 500;
+}
+
+.code-wrap pre {
+  background: #1c1a16;
+  padding: 1.25rem 1.4rem;
+  font-family: "DM Mono", monospace;
+  font-size: 0.8rem;
+  line-height: 1.75;
+  overflow-x: auto;
+  color: #d4cfc7;
+}
+
+.code-wrap pre .kw { color: #e0935c; }
+.code-wrap pre .str { color: #8fc98e; }
+.code-wrap pre .cm { color: #636059; font-style: italic; }
+.code-wrap pre .fn { color: #79b8ff; }
+
+/* ── Callout boxes ───────────────────────────────────────────────── */
+.callout {
+  border-left: 3px solid var(--accent);
+  background: var(--tag-bg);
+  border-radius: 0 6px 6px 0;
+  padding: 1rem 1.25rem;
+  font-size: 0.875rem;
+  color: var(--ink2);
+  line-height: 1.65;
+  margin: 1.25rem 0;
+}
+
+.callout strong { color: var(--ink); }
+.callout-blue { border-color: var(--accent2); background: #edf3ff; }
+.callout-green { border-color: var(--accent3); background: #edf7f2; }
+
+/* ── Tables ──────────────────────────────────────────────────────── */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+}
+
+.data-table th {
+  text-align: left;
+  padding: 0.65rem 1rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: "DM Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
+
+.data-table td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink2);
+  vertical-align: top;
+}
+
+.data-table tr:last-child td { border-bottom: none; }
+.data-table tr:nth-child(even) td { background: #faf9f7; }
+
+.tag-green { color: var(--accent3); font-weight: 600; }
+.tag-orange { color: var(--accent); font-weight: 600; }
+.tag-blue { color: var(--accent2); font-weight: 600; }
+
+/* ── Step cards ──────────────────────────────────────────────────── */
+.install-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.install-card {
+  background: var(--paper);
+  padding: 1.75rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  transition: background 0.15s;
+}
+
+.install-card:hover { background: var(--tag-bg); }
+
+.step-n {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.step-body h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.35rem; }
+.step-body p { font-size: 0.85rem; color: var(--ink2); line-height: 1.6; }
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .install-grid { grid-template-columns: 1fr; }
+  .wide-wrap { padding: 2rem 1.25rem 4rem; }
+  .page-wrap { padding: 2rem 1.25rem 4rem; }
+}
